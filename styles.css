@@ -1,220 +1,330 @@
 /**********************************************
  * 1. 字体 + 全局重置
  **********************************************/
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
- }
- 
- /**********************************************
-  * 2. Body 设置（背景渐变 + 基础字体等）
-  **********************************************/
- body {
-   font-family: 'Poppins', sans-serif;
-   color: #333;
-   background: linear-gradient(to right, #dfe9f3, #ffffff);
-   line-height: 1.6;
-   overflow-y: scroll;
-   max-width: 1600px;
-   margin: 0 auto;
-   padding: 1rem;
- }
- 
- /**********************************************
-  * 3. 导航栏（Navbar）
-  **********************************************/
- .navbar {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   background-color: #264653;
-   padding: 1rem 2rem;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- }
- 
- .logo {
-   font-weight: 600;
-   font-size: 1.2rem;
-   color: #fff;
- }
- 
- .nav-links {
-   list-style: none;
-   display: flex;
- }
- 
- .nav-links li {
-   margin-left: 1.5rem;
- }
- 
- .nav-links a {
-   text-decoration: none;
-   color: #fff;
-   font-weight: 400;
-   transition: color 0.3s ease;
- }
- 
- .nav-links a:hover,
- .nav-links .active {
-   color: #2a9d8f;
-   font-weight: 600;
- }
- 
- /**********************************************
-  * 4. 页面主体内容区（默认样式）
-  **********************************************/
- .page-content {
-   max-width: 1000px; /* 默认页面宽度 */
-   margin: 2rem auto;
-   padding: 2rem;
-   background-color: #fff;
-   border-radius: 5px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
- 
- .page-content h1,
- .page-content h2,
- .page-content h3,
- .page-content p,
- .page-content ul,
- .page-content ol {
-   margin-bottom: 1rem;
- }
- 
- .page-content h2 {
-   margin-top: 1.5rem;
-   margin-bottom: 1rem;
- }
- 
- .page-content h3 {
-   margin-top: 1.2rem;
-   margin-bottom: 0.8rem;
- }
- 
- .page-content ul,
- .page-content ol {
-   margin-left: 1.25rem;
-   padding-left: 1rem;
- }
- 
- /**********************************************
-  * 5. Usage Examples 页面特定样式
-  **********************************************/
- .wide-page {
-   max-width: 1200px; /* Usage Examples 页面更宽 */
-   margin: 2rem auto;
-   padding: 2rem;
- }
- 
- .wide-page .two-col-container {
-   display: flex;
-   gap: 2rem;
-   max-width: 100%; /* 容器最大宽度 */
- }
- 
- /* 左右两列宽度相等 */
- .wide-page .left-col,
- .wide-page .right-col {
-   flex: 1; /* 各占一半宽度 */
-   max-height: 80vh; /* 限制高度 */
-   overflow-y: auto; /* 超出部分滚动 */
-   background-color: #fff;
-   border: 1px solid #ccc;
-   border-radius: 8px;
-   padding: 1rem;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
- 
- /**********************************************
-  * 6. 表格样式
-  **********************************************/
- table {
-   width: 100%;
-   border-collapse: collapse;
-   margin-bottom: 1.5rem;
- }
- 
- th,
- td {
-   border: 1px solid #ccc;
-   padding: 0.75rem;
-   text-align: left;
- }
- 
- thead {
-   background-color: #f2f2f2;
- }
- 
- /**********************************************
-  * 7. 按钮样式
-  **********************************************/
- .btn {
-   display: inline-block;
-   background-color: #2a9d8f;
-   color: #fff;
-   padding: 0.6rem 1.2rem;
-   border-radius: 4px;
-   text-decoration: none;
-   transition: background-color 0.3s ease;
-   font-weight: 500;
- }
- 
- .btn:hover {
-   background-color: #1f7d71;
- }
- 
- /**********************************************
-  * 8. 页脚
-  **********************************************/
- footer {
-   text-align: center;
-   padding: 1rem;
-   margin-top: 2rem;
-   background-color: #fff;
-   border-top: 1px solid #ddd;
- }
- 
- /**********************************************
-  * 9. 滚动条样式
-  **********************************************/
- .wide-page .left-col::-webkit-scrollbar,
- .wide-page .right-col::-webkit-scrollbar {
-   width: 8px;
- }
- 
- .wide-page .left-col::-webkit-scrollbar-thumb,
- .wide-page .right-col::-webkit-scrollbar-thumb {
-   background-color: #2a9d8f;
-   border-radius: 5px;
- }
- 
- .wide-page .left-col::-webkit-scrollbar-track,
- .wide-page .right-col::-webkit-scrollbar-track {
-   background-color: #e0e0e0;
- }
- 
- /**********************************************
-  * 10. 响应式设计
-  **********************************************/
- @media (max-width: 768px) {
-   .two-col-container {
-     flex-direction: column;
-   }
- 
-   .left-col,
-   .right-col {
-     max-height: none;
-     overflow-y: visible;
-   }
- }
- /* 联系页内容容器：两列布局 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/**********************************************
+ * 2. Body 设置（背景渐变 + 基础字体等）
+ **********************************************/
+body {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-attachment: fixed;
+  line-height: 1.6;
+  overflow-y: scroll;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/**********************************************
+ * 3. 导航栏（Navbar）
+ **********************************************/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(38, 70, 83, 0.95);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2a9d8f;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #2a9d8f;
+  font-weight: 600;
+}
+
+/**********************************************
+ * 4. 页面主体内容区（默认样式）
+ **********************************************/
+.page-content {
+  max-width: 1000px; /* 默认页面宽度 */
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.page-content:hover {
+  transform: translateY(-5px);
+}
+
+.page-content h1 {
+  font-size: 2.2rem;
+  color: #264653;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #2a9d8f;
+  padding-bottom: 0.5rem;
+}
+
+.page-content h2 {
+  font-size: 1.8rem;
+  color: #2a9d8f;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.page-content h3 {
+  font-size: 1.4rem;
+  color: #264653;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-content p {
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+}
+
+.page-content ul,
+.page-content ol {
+  margin-left: 1.25rem;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-content li {
+  margin-bottom: 0.5rem;
+}
+
+/**********************************************
+ * 5. Usage Examples 页面特定样式
+ **********************************************/
+.wide-page {
+  max-width: 1200px; /* Usage Examples 页面更宽 */
+  margin: 2rem auto;
+  padding: 2.5rem;
+}
+
+.wide-page .two-col-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 100%; /* 容器最大宽度 */
+}
+
+/* 左右两列宽度相等 */
+.wide-page .left-col,
+.wide-page .right-col {
+  flex: 1; /* 各占一半宽度 */
+  max-height: 80vh; /* 限制高度 */
+  overflow-y: auto; /* 超出部分滚动 */
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wide-page .left-col:hover,
+.wide-page .right-col:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/**********************************************
+ * 6. 表格样式
+ **********************************************/
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  border: none;
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: #264653;
+  color: white;
+  font-weight: 500;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tr:hover {
+  background-color: #e9f5f3;
+}
+
+/**********************************************
+ * 7. 按钮样式
+ **********************************************/
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #2a9d8f 0%, #264653 100%);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(42, 157, 143, 0.3);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #264653 0%, #2a9d8f 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(42, 157, 143, 0.4);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/**********************************************
+ * 8. 页脚
+ **********************************************/
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: none;
+  border-radius: 8px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+footer p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/**********************************************
+ * 9. 滚动条样式
+ **********************************************/
+.wide-page .left-col::-webkit-scrollbar,
+.wide-page .right-col::-webkit-scrollbar {
+  width: 8px;
+}
+
+.wide-page .left-col::-webkit-scrollbar-thumb,
+.wide-page .right-col::-webkit-scrollbar-thumb {
+  background-color: #2a9d8f;
+  border-radius: 20px;
+}
+
+.wide-page .left-col::-webkit-scrollbar-track,
+.wide-page .right-col::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+}
+
+/**********************************************
+ * 10. 响应式设计
+ **********************************************/
+@media (max-width: 768px) {
+  .two-col-container {
+    flex-direction: column;
+  }
+
+  .left-col,
+  .right-col {
+    max-height: none;
+    overflow-y: visible;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .logo {
+    margin-bottom: 1rem;
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .nav-links li {
+    margin: 0;
+  }
+}
+
+/* 联系页内容容器：两列布局 */
 .contact-container {
   display: flex;
   align-items: flex-start; /* 垂直方向对齐 */
-  gap: 2rem; /* 左右间距 */
+  gap: 2.5rem; /* 左右间距 */
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* 左侧文字信息（占用较多空间） */
@@ -234,6 +344,35 @@
 .profile-photo {
   max-width: 100%; /* 确保照片不会超过容器宽度 */
   height: auto; /* 保持宽高比例 */
-  border-radius: 8px; /* 添加轻微圆角 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  border-radius: 12px; /* 添加轻微圆角 */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* 阴影效果 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 添加卡片悬停效果 */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* 添加强调文本样式 */
+.highlight {
+  background: linear-gradient(120deg, rgba(42, 157, 143, 0.2) 0%, rgba(42, 157, 143, 0) 100%);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-weight: 500;
 }
